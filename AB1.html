@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AB Subjective Listening Test Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
+  <script type="text/javascript" src="./download.js"></script>
+  <!-- <script type="text/javascript" src="./config_AB.js"></script> -->
+  <!-- <script type="text/javascript" src="./config_ABX.js"></script> -->
+  <script type="text/javascript" src="./main.js"></script>
+  
+</head>
+
+<body> <!-- onload="init();">-->
+<div>
+  <h1>AECNN v.s. CTS-Net</h1>
+  <p id="question" class="question"></p>
+</div>
+<!-- <div> -->
+		<!-- <a href="AB2.html"> to Section2 Test</a> -->
+		<!-- <a href="AB3.html"> to Section3 Test</a> -->
+<!-- </div> -->
+<!-- <div> -->
+		<!-- <h6>若已完成该section但不慎关闭网页，可点击链接跳转至<a href="AB2.html"> to Section2 Test</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <a href="AB3.html"> to Section3 Test</a></h6> -->
+		<p></p>
+<!-- </div> -->
+
+
+<div class="btn-ab" align="center">
+  <table class="tg" align="center"><!--style="undefined;table-layout: fixed; width: 493px">-->
+    <colgroup>
+      <col style="width: 85px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+	  <col style="width: 300px">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="tg-c3ow"></th>
+        <th class="tg-c3ow">Noisy</th>
+        <th class="tg-c3ow">A</th>
+        <th class="tg-c3ow">B</th>
+		<th class="tg-c3ow">Ans</th>
+      </tr>
+    </thead>
+    <tbody>
+	  
+	  <tr>
+        <td class="tg-pcvp">test1</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01bc020e_6_5.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01bc020e_6_5.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01bc020e_6_5.wav"></audio></td>
+		<td class="tg-ihkz"><div class="placeDiv"></div></td>
+      </tr>
+	  <tr id="test1">
+        <td class="tg-pcvp"></td>
+        <td id="c10" class="tg-ihkz">
+		<label class="radio10"><input id="choice10" type="radio" name="option1" value="E" >Eq</label> 
+		</td>
+        <td id="c11" class="tg-ihkz">
+		<label class="radio11"><input id="choice11" type="radio" name="option1" value="A" >A</label>
+		</td>
+        <td id="c12" class="tg-ihkz">
+		<label class="radio12"><input id="choice12" type="radio" name="option1" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000;">B</div>
+		</td>
+      </tr>
+
+	  <tr>
+        <td class="tg-pcvp">test2</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01bc020o_0_14.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01bc020o_0_14.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01bc020o_0_14.wav"></audio></td>
+      </tr>
+	  <tr id="test2">
+        <td class="tg-pcvp"></td>
+        <td id="c20" class="tg-ihkz">
+		<label class="radio20"><input id="choice20" type="radio" name="option2" value="E" >Eq</label> 
+		</td>
+        <td id="c21" class="tg-ihkz">
+		<label class="radio21"><input id="choice21" type="radio" name="option2" value="A" >A</label>
+		</td>
+        <td id="c22" class="tg-ihkz">
+		<label class="radio22"><input id="choice22" type="radio" name="option2" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td class="tg-pcvp">test3</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01bc020r_-6_17.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01bc020r_-6_17.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01bc020r_-6_17.wav"></audio></td>
+      </tr>
+	  <tr id="test3">
+        <td class="tg-pcvp"></td>
+        <td id="c30" class="tg-ihkz">
+		<label class="radio30"><input id="choice30" type="radio" name="option3" value="E" >Eq</label> 
+		</td>
+        <td id="c31" class="tg-ihkz">
+		<label class="radio31"><input id="choice31" type="radio" name="option3" value="A" >A</label>
+		</td>
+        <td id="c32" class="tg-ihkz">
+		<label class="radio32"><input id="choice32" type="radio" name="option3" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td class="tg-pcvp">test4</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01bc020t_3_19.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01bc020t_3_19.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01bc020t_3_19.wav"></audio></td>
+      </tr>
+	  <tr id="test4">
+        <td class="tg-pcvp"></td>
+        <td id="c40" class="tg-ihkz">
+		<label class="radio40"><input id="choice40" type="radio" name="option4" value="E" >Eq</label> 
+		</td>
+        <td id="c41" class="tg-ihkz">
+		<label class="radio41"><input id="choice41" type="radio" name="option4" value="A" >A</label>
+		</td>
+        <td id="c42" class="tg-ihkz">
+		<label class="radio42"><input id="choice42" type="radio" name="option4" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td class="tg-pcvp">test5</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01bc020v_-3_21.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01bc020v_-3_21.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01bc020v_-3_21.wav"></audio></td>
+      </tr>
+	  <tr id="test5">
+        <td class="tg-pcvp"></td>
+        <td id="c50" class="tg-ihkz">
+		<label class="radio50"><input id="choice50" type="radio" name="option5" value="E" >Eq</label> 
+		</td>
+        <td id="c51" class="tg-ihkz">
+		<label class="radio51"><input id="choice51" type="radio" name="option5" value="A" >A</label>
+		</td>
+        <td id="c52" class="tg-ihkz">
+		<label class="radio52"><input id="choice52" type="radio" name="option5" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td class="tg-pcvp">test6</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01bc020w_-6_22.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01bc020w_-6_22.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01bc020w_-6_22.wav"></audio></td>
+      </tr>
+	  <tr id="test6">
+        <td class="tg-pcvp"></td>
+        <td id="c60" class="tg-ihkz">
+		<label class="radio60"><input id="choice60" type="radio" name="option6" value="E" >Eq</label> 
+		</td>
+        <td id="c61" class="tg-ihkz">
+		<label class="radio61"><input id="choice61" type="radio" name="option6" value="A" >A</label>
+		</td>
+        <td id="c12" class="tg-ihkz">
+		<label class="radio62"><input id="choice62" type="radio" name="option6" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td class="tg-pcvp">test7</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01bc020y_6_24.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01bc020y_6_24.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01bc020y_6_24.wav"></audio></td>
+      </tr>
+	  <tr id="test7">
+        <td class="tg-pcvp"></td>
+        <td id="c70" class="tg-ihkz">
+		<label class="radio70"><input id="choice70" type="radio" name="option7" value="E" >Eq</label> 
+		</td>
+        <td id="c71" class="tg-ihkz">
+		<label class="radio71"><input id="choice71" type="radio" name="option7" value="A" >A</label>
+		</td>
+        <td id="c72" class="tg-ihkz">
+		<label class="radio72"><input id="choice72" type="radio" name="option7" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td class="tg-pcvp">test8</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01ec020d_-3_29.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01ec020d_-3_29.wav""></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01ec020d_-3_29.wav""></audio></td>
+      </tr>
+	  <tr id="test8">
+        <td class="tg-pcvp"></td>
+        <td id="c80" class="tg-ihkz">
+		<label class="radio80"><input id="choice80" type="radio" name="option8" value="E" >Eq</label> 
+		</td>
+        <td id="c81" class="tg-ihkz">
+		<label class="radio81"><input id="choice81" type="radio" name="option8" value="A" >A</label>
+		</td>
+        <td id="c82" class="tg-ihkz">
+		<label class="radio82"><input id="choice82" type="radio" name="option8" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td class="tg-pcvp">test9</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01ec020j_6_35.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01ec020j_6_35.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01ec020j_6_35.wav"></audio></td>
+      </tr>
+	  <tr id="test9">
+        <td class="tg-pcvp"></td>
+        <td id="c90" class="tg-ihkz">
+		<label class="radio90"><input id="choice90" type="radio" name="option9" value="E" >Eq</label> 
+		</td>
+        <td id="c91" class="tg-ihkz">
+		<label class="radio91"><input id="choice91" type="radio" name="option9" value="A" >A</label>
+		</td>
+        <td id="c92" class="tg-ihkz">
+		<label class="radio92"><input id="choice92" type="radio" name="option9" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td class="tg-pcvp">test10</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01ec020v_0_47.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01ec020v_0_47.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01ec020v_0_47.wav"></audio></td>
+      </tr>
+	  <tr id="test10">
+        <td class="tg-pcvp"></td>
+        <td id="c100" class="tg-ihkz">
+		<label class="radio100"><input id="choice100" type="radio" name="option10" value="E" >Eq</label> 
+		</td>
+        <td id="c101" class="tg-ihkz">
+		<label class="radio101"><input id="choice101" type="radio" name="option10" value="A" >A</label>
+		</td>
+        <td id="c102" class="tg-ihkz">
+		<label class="radio102"><input id="choice102" type="radio" name="option10" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  
+	  <tr>
+        <td class="tg-pcvp">test11</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01fc020j_-6_60.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01fc020j_-6_60.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01fc020j_-6_60.wav"></audio></td>
+      </tr>
+	  <tr id="test11">
+        <td class="tg-pcvp"></td>
+        <td id="c110" class="tg-ihkz">
+		<label class="radio110"><input id="choice110" type="radio" name="option11" value="E" >Eq</label> 
+		</td>
+        <td id="c111" class="tg-ihkz">
+		<label class="radio111"><input id="choice111" type="radio" name="option11" value="A" >A</label>
+		</td>
+        <td id="c112" class="tg-ihkz">
+		<label class="radio112"><input id="choice112" type="radio" name="option11" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+      
+	  <tr>
+        <td class="tg-pcvp">test12</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01fc020r_-6_68.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01fc020r_-6_68.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01fc020r_-6_68.wav"></audio></td>
+      </tr>
+	  <tr id="test12">
+        <td class="tg-pcvp"></td>
+        <td id="c120" class="tg-ihkz">
+		<label class="radio120"><input id="choice120" type="radio" name="option12" value="E" >Eq</label> 
+		</td>
+        <td id="c121" class="tg-ihkz">
+		<label class="radio21"><input id="choice121" type="radio" name="option12" value="A" >A</label>
+		</td>
+        <td id="c122" class="tg-ihkz">
+		<label class="radio122"><input id="choice122" type="radio" name="option12" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td class="tg-pcvp">test13</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01gc020f_6_81.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01gc020f_6_81.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01gc020f_6_81.wav"></audio></td>
+      </tr>
+	  <tr id="test13">
+        <td class="tg-pcvp"></td>
+        <td id="c130" class="tg-ihkz">
+		<label class="radio130"><input id="choice130" type="radio" name="option13" value="E" >Eq</label> 
+		</td>
+        <td id="c131" class="tg-ihkz">
+		<label class="radio131"><input id="choice131" type="radio" name="option13" value="A" >A</label>
+		</td>
+        <td id="c132" class="tg-ihkz">
+		<label class="radio132"><input id="choice132" type="radio" name="option13" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td class="tg-pcvp">test14</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01gc020j_0_85.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01gc020j_0_85.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01gc020j_0_85.wav"></audio></td>
+      </tr>
+	  <tr id="test14">
+        <td class="tg-pcvp"></td>
+        <td id="c140" class="tg-ihkz">
+		<label class="radio140"><input id="choice140" type="radio" name="option14" value="E" >Eq</label> 
+		</td>
+        <td id="c141" class="tg-ihkz">
+		<label class="radio141"><input id="choice141" type="radio" name="option14" value="A" >A</label>
+		</td>
+        <td id="c142" class="tg-ihkz">
+		<label class="radio142"><input id="choice142" type="radio" name="option14" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td class="tg-pcvp">test15</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01gc020n_3_89.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01gc020n_3_89.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01gc020n_3_89.wav"></audio></td>
+      </tr>
+	  <tr id="test15">
+        <td class="tg-pcvp"></td>
+        <td id="c150" class="tg-ihkz">
+		<label class="radio150"><input id="choice150" type="radio" name="option15" value="E" >Eq</label> 
+		</td>
+        <td id="c151" class="tg-ihkz">
+		<label class="radio151"><input id="choice151" type="radio" name="option15" value="A" >A</label>
+		</td>
+        <td id="c152" class="tg-ihkz">
+		<label class="radio152"><input id="choice152" type="radio" name="option15" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td class="tg-pcvp">test16</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01gc020s_-3_94.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01gc020s_-3_94.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01gc020s_-3_94.wav"></audio></td>
+      </tr>
+	  <tr id="test16">
+        <td class="tg-pcvp"></td>
+        <td id="c160" class="tg-ihkz">
+		<label class="radio160"><input id="choice160" type="radio" name="option16" value="E" >Eq</label> 
+		</td>
+        <td id="c161" class="tg-ihkz">
+		<label class="radio161"><input id="choice161" type="radio" name="option16" value="A" >A</label>
+		</td>
+        <td id="c162" class="tg-ihkz">
+		<label class="radio162"><input id="choice162" type="radio" name="option16" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td class="tg-pcvp">test17</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01ic020g_0_107.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01ic020g_0_107.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01ic020g_0_107.wav"></audio></td>
+      </tr>
+	  <tr id="test17">
+        <td class="tg-pcvp"></td>
+        <td id="c170" class="tg-ihkz">
+		<label class="radio170"><input id="choice170" type="radio" name="option17" value="E" >Eq</label> 
+		</td>
+        <td id="c171" class="tg-ihkz">
+		<label class="radio171"><input id="choice171" type="radio" name="option17" value="A" >A</label>
+		</td>
+        <td id="c172" class="tg-ihkz">
+		<label class="radio172"><input id="choice172" type="radio" name="option17" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td class="tg-pcvp">test18</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/01ic020l_-3_112.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/01ic020l_-3_112.wav""></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/01ic020l_-3_112.wav""></audio></td>
+      </tr>
+	  <tr id="test18">
+        <td class="tg-pcvp"></td>
+        <td id="c180" class="tg-ihkz">
+		<label class="radio180"><input id="choice180" type="radio" name="option18" value="E" >Eq</label> 
+		</td>
+        <td id="c181" class="tg-ihkz">
+		<label class="radio181"><input id="choice181" type="radio" name="option18" value="A" >A</label>
+		</td>
+        <td id="c182" class="tg-ihkz">
+		<label class="radio182"><input id="choice182" type="radio" name="option18" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td class="tg-pcvp">test19</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/40gc020p_3_141.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/40gc020p_3_141.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/40gc020p_3_141.wav"></audio></td>
+      </tr>
+	  <tr id="test19">
+        <td class="tg-pcvp"></td>
+        <td id="c190" class="tg-ihkz">
+		<label class="radio190"><input id="choice190" type="radio" name="option19" value="E" >Eq</label> 
+		</td>
+        <td id="c191" class="tg-ihkz">
+		<label class="radio191"><input id="choice191" type="radio" name="option19" value="A" >A</label>
+		</td>
+        <td id="c192" class="tg-ihkz">
+		<label class="radio192"><input id="choice192" type="radio" name="option19" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td class="tg-pcvp">test20</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/mix/40gc020t_3_145.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/A/40gc020t_3_145.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="audio/CTS_vs_AECNN/B/40gc020t_3_145.wav"></audio></td>
+      </tr>
+	  <tr id="test20">
+        <td class="tg-pcvp"></td>
+        <td id="c200" class="tg-ihkz">
+		<label class="radio200"><input id="choice200" type="radio" name="option20" value="E" >Eq</label> 
+		</td>
+        <td id="c201" class="tg-ihkz">
+		<label class="radio201"><input id="choice201" type="radio" name="option20" value="A" >A</label>
+		</td>
+        <td id="c202" class="tg-ihkz">
+		<label class="radio202"><input id="choice202" type="radio" name="option20" value="B" >B</label>
+		</td>
+		<td class="tg-ihkz">
+		<div class="displayDiv" style="display:none; color:#FF0000">B</div>
+		</td>
+      </tr>
+	  
+	  
+	  <tr>
+	  </tr>
+    </tbody>
+  </table>
+</div>
+
+<div ></div>
+<!-- <div class="btn-end"> -->
+  <!-- <button id="submit" onclick="nextButton1()">SUBMIT <1></button> -->
+<!-- </div> -->
+<!-- <div> -->
+	<!-- <img src="image/figure1.png"> -->
+<!-- </div> -->
+
+<div class="btn-end">
+  <button id="submit" onclick="seeAnsBtn()">click here </button>
+</div>
+<div class="btn-end">
+	<button id="next" onclick="nextHtml1()">next </button>
+</div>
+<div>
+	<img src="image/figure1.png">
+</div>
+</body>
+</html>
